@@ -2,6 +2,7 @@ package com.toporead.mytest;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
+        Log.i("text", String.valueOf(data.size()));
         return data.size();
     }
 
@@ -43,7 +45,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             textView=itemView.findViewById(R.id.mytext);
-            textView.setTextColor(Color.parseColor("#ff0000"));
         }
     }
 }
